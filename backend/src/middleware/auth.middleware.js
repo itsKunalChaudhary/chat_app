@@ -20,6 +20,11 @@ export const protectRoute = async (req, res, next) => {
             res.status(401).json({message: "User Not Found"});
         }
 
+        if (!token) {
+            return res.status(401).json({ message: "Not authorized - no token" });
+        }
+
+
         req.user = user;
         next();
     } catch (error) {
