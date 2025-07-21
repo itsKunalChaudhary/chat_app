@@ -9,17 +9,18 @@ import ProfilePage from "./pages/ProfilePage.jsx";
 import { useAuthStore } from "./store/useAuthStore.js";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
+import loading from "daisyui/components/loading/index.js";
 
 const App = () => {
-    const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+    const { authUser, checkAuth, isCheckingAuth, loading } = useAuthStore();
 
-    // ✅ Corrected useEffect
+
     useEffect(() => {
         checkAuth();
     }, [checkAuth]);
 
     // ✅ Show loading spinner
-    if (isCheckingAuth && !authUser) return (
+    if (isCheckingAuth && !authUser && loading) return (
         <div className="flex items-center justify-center h-screen">
             <Loader className="size-10 animate-spin" />
         </div>
