@@ -19,7 +19,6 @@ const App = () => {
         checkAuth();
     }, [checkAuth]);
 
-    // ✅ Show loading spinner
     if (isCheckingAuth && !authUser && loading) return (
         <div className="flex items-center justify-center h-screen">
             <Loader className="size-10 animate-spin" />
