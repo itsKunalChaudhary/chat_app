@@ -6,8 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['"Intel One Mono"', 'monospace'], // custom key
-        // OR replace the default sans like this:
+        mono: ['"Intel One Mono"', 'monospace'],
         sans: ['"Intel One Mono"', 'sans-serif'],
       },
     },

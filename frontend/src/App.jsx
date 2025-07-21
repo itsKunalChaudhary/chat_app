@@ -9,10 +9,17 @@ import ProfilePage from "./pages/ProfilePage.jsx";
 import { useAuthStore } from "./store/useAuthStore.js";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
-import loading from "daisyui/components/loading/index.js";
+import {useThemeStore} from "./store/useThemeStore.js";
 
 const App = () => {
     const { authUser, checkAuth, isCheckingAuth, loading } = useAuthStore();
+    const { theme } = useThemeStore();
+
+    useEffect(() => {
+        if (theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+        }
+    }, [theme]);
 
 
     useEffect(() => {
@@ -26,7 +33,7 @@ const App = () => {
     );
 
     return (
-        <div>
+        <div data-theme={theme}>
             <Navbar />
             <Routes>
                 <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
