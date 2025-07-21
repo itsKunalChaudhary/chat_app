@@ -1,3 +1,5 @@
+import {MessageSquare} from "lucide-react";
+
 const AuthBrandSide = () => {
     return (
         <div className="hidden lg:flex items-center justify-center bg-base-200 p-12 relative">
@@ -21,7 +23,10 @@ const AuthBrandSide = () => {
 
             {/* ✅ Bottom-Centered Text */}
             <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-center text-base-content/50 space-y-1">
-                <h1 className="text-xl font-medium">Join Our Community</h1>
+                <div className={"flex items-center justify-center gap-2 text-primary"}>
+                    <MessageSquare className="size-4 text-primary" />
+                    <h1 className="text-xl font-medium">Join Our Community</h1>
+                </div>
                 <span className="text-l">© ChatNet</span>
             </div>
         </div>
