@@ -25,6 +25,6 @@ export const protectRoute = async (req, res, next) => {
         next();
     } catch (error) {
         console.error("Error in Auth Middleware", error.message);
-        return res.status(500).json({ message: "Error in protectRoute function" });
+        return res.status(401).json({ message: "Unauthorized - token failed" });
     }
 };
