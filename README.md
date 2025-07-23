@@ -2,8 +2,6 @@
 
 ChatNet is a sleek and responsive real-time chat application designed for seamless communication between users. Built with modern technologies, it features a polished UI, theme customization, and intuitive UX.
 
-![ChatNet Preview](\frontend\public\ChatNet1.png)
-
 ---
 
 ## 🚀 Features
@@ -90,16 +88,6 @@ VITE_BACKEND_URL=http://localhost:5000
 ```bash
 npm run dev
 ```
-
-## 📸 Screenshots
-- **Home / Chat View**
-![ChatNet Preview](\frontend\public\ChatNet1.png)
-
-- **Theme Selection**
-![ChatNet Preview](\frontend\public\ChatNet2.png)
-
-- **Login Page**
-![ChatNet Preview](\frontend\public\ChatNet3.png)
 
 ## 🌐 Live Demo
 👉 Frontend: https://chatnet-six.vercel.app 
