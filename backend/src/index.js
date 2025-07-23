@@ -19,7 +19,7 @@ app.use(cookieParser());
 // }))
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://chatnet-six.vercel.app/",
+    "https://chatnet-six.vercel.app",
 ];
 
 app.use(cors({
