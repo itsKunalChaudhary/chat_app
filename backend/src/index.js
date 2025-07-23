@@ -19,7 +19,7 @@ app.use(cookieParser());
 // }))
 const allowedOrigins = [
     "http://localhost:5173",
-    //"https://chatnet-frontend.vercel.app", // update to your Vercel frontend URL
+    "https://chatnet-six.vercel.app/",
 ];
 
 app.use(cors({
